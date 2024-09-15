@@ -64,10 +64,10 @@ export default function TestVision() {
       </form>
 
       <div>
-        {chatdata.map((data,index)=>(
+        {/* {chatdata.map((data,index)=>(
         <ChatMessage msg={data} key={index}/>
 
-))}
+))} */}
     </div>
     </div>
   );
