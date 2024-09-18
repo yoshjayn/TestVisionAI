@@ -1,23 +1,14 @@
-import TestVision from './components/TestVision/TestVision'
-import LandingPage from './components/TestVision/LandingPage'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './App.css'
+import Home from './screens/Home.screen';
+import TestVision from './screens/TestVision.screen';
+import { Route, Routes } from 'react-router-dom';
 
-function App() {
-  
-
+const App = () => {
   return (
-    <>
-      <Router>
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/test-vision" element={<TestVision />} />
-          {/* <Route path="/signup" element={<Signup />} /> */}
-        </Routes>
-    </Router>
-    </>
-    
-  )
-}
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/test-vision" element={<TestVision />} />
+    </Routes>
+  );
+};
 
-export default App
+export default App;
