@@ -3,3 +3,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+  --card: #0A1A2A;
+  --card-foreground: #ffffff;
+  --primary: #09C0A1;
+  --muted: #828282;
+}
