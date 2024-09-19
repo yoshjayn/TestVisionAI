@@ -3,3 +3,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.filter-teal {
+    filter: invert(45%) sepia(90%) saturate(500%) hue-rotate(120deg) brightness(95%) contrast(95%);
+}
+
+:root {
+    --background: #ffffff;
+    --foreground: #000000;
+    --card: #0A1A2A;
+    --card-foreground: #ffffff;
+    --primary: #09C0A1;
+    --muted: #828282;
+}
