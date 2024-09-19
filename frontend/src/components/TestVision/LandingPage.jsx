@@ -1,55 +1,88 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import ExpandableContent from './components/ExpandableContent';
+import { MdOutlineFileUpload, MdTextFields } from "react-icons/md";
+import { FaRegUser, FaRegHeart, FaRegSmile } from "react-icons/fa";
+import { VscSend } from "react-icons/vsc";
+import useToggleStore from '../../store/useStore';
+import TestVisionSVG from "../../assets/test_vision_image.svg";
 
 const LandingPage = () => {
-  return (
-    <div className="font-sans min-h-screen bg-gray-50">
-      <header className="bg-black text-center p-12">
-        <p className="text-3xl text-green-300">Hello</p>
+    const contentData = [
+        {
+            icon: <FaRegUser size={20} />,
+            heading: "Login in to our website",
+            content: "Enter detailed description of your website/application’s flow which will help us understand the context of the screenshots and let AI bring you more related and meaningful test cases",
+            image: TestVisionSVG
+        },
+        {
+            icon: <MdOutlineFileUpload size={26} />,
+            heading: "Upload screenshots of your application/website",
+            content: "Enter detailed description of your website/application’s flow which will help us understand the context of the screenshots and let AI bring you more related and meaningful test cases",
+            image: TestVisionSVG
+        },
+        {
+            icon: <MdTextFields size={26} />,
+            heading: "Enter a context to explain your the user flow",
+            content: "Enter detailed description of your website/application’s flow which will help us understand the context of the screenshots and let AI bring you more related and meaningful test cases",
+            image: TestVisionSVG
+        },
+        {
+            icon: <VscSend size={24} />,
+            heading: "Click the button to generate results",
+            content: "Enter detailed description of your website/application’s flow which will help us understand the context of the screenshots and let AI bring you more related and meaningful test cases",
+            image: TestVisionSVG
+        },
+        {
+            icon: <FaRegHeart size={22} />,
+            heading: "Let the AI do it’s magic",
+            content: "Enter detailed description of your website/application’s flow which will help us understand the context of the screenshots and let AI bring you more related and meaningful test cases",
+            image: TestVisionSVG
+        },
+        {
+            icon: <FaRegSmile size={24} />,
+            heading: "Receive detailed, step-by-step test cases",
+            content: "Enter detailed description of your website/application’s flow which will help us understand the context of the screenshots and let AI bring you more related and meaningful test cases",
+            image: TestVisionSVG
+        }
+    ];
 
-        <div className="text-3xl font-bold">
-          {/* Multicolor text effect */}
-          <span className="text-red-500">T</span>
-          <span className="text-yellow-500">a</span>
-          <span className="text-green-500">i</span>
-          <span className="text-blue-500">l</span>
-          <span className="text-purple-500">w</span>
-          <span className="text-orange-500">i</span>
-          <span className="text-teal-500">n</span>
-          <span className="text-pink-500">d</span>
-          <span className='text-white'> CSS is working!</span>
+    const { currentIndex, toggleIndex } = useToggleStore();
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            toggleIndex(currentIndex < contentData.length ? currentIndex + 1 : 1);
+        }, 5000);
+
+        return () => clearInterval(interval);
+    }, [currentIndex, toggleIndex, contentData.length]);
+
+    const validIndex = currentIndex ? currentIndex - 1 : 0;
+
+    return (
+        <div className='px-14 flex flex-col gap-7 py-20'>
+            <div className='w-full'>
+                <div className='text-[#09C0A1] font-bold text-lg'>USAGE GUIDE</div>
+                <div className='text-black font-bold text-3xl'>How it Works?</div>
+            </div>
+            <div className='bg-white flex flex-row w-full'>
+                <div className='w-1/2 h-fit flex flex-col gap-5'>
+                    {contentData.map((item, index) => (
+                        <ExpandableContent
+                            key={index}
+                            icon={item.icon}
+                            heading={item.heading}
+                            content={item.content}
+                            index={index + 1}
+                        />
+                    ))}
+                </div>
+                <div className='flex-1 w-full flex items-center justify-center' style={{height: "600px"}}>
+                    <img src={contentData[validIndex].image} alt='Test Vision SVG' className='h-[550px]' />
+                </div>
+            </div>
         </div>
-
-        <h1 className="text-5xl font-bold text-white mt-4">Welcome to Test Vision AI</h1>
-        <p className="text-lg text-gray-300 mt-2">Your tagline or description goes here.</p>
-        <Link to="/test-vision" className="mt-6 inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition">
-          Learn More
-        </Link>
-      </header>
-
-      <section id="features" className="py-12 text-center bg-gray-100">
-        <h2 className="text-3xl font-bold mb-8">Features</h2>
-        <div className="flex flex-wrap justify-around">
-          <div className="w-full sm:w-1/3 p-4 bg-white shadow-md rounded-lg m-4">
-            <h3 className="text-2xl font-semibold mb-4">Feature 1</h3>
-            <p className="text-gray-600">Description of feature 1.</p>
-          </div>
-          <div className="w-full sm:w-1/3 p-4 bg-white shadow-md rounded-lg m-4">
-            <h3 className="text-2xl font-semibold mb-4">Feature 2</h3>
-            <p className="text-gray-600">Description of feature 2.</p>
-          </div>
-          <div className="w-full sm:w-1/3 p-4 bg-white shadow-md rounded-lg m-4">
-            <h3 className="text-2xl font-semibold mb-4">Feature 3</h3>
-            <p className="text-gray-600">Description of feature 3.</p>
-          </div>
-        </div>
-      </section>
-
-      <footer className="bg-gray-200 py-6 text-center">
-        <p className="text-sm text-gray-600">© 2024 My Website. All rights reserved.</p>
-      </footer>
-    </div>
-  );
+    );
 };
 
 export default LandingPage;
+
