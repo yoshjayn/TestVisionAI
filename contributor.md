@@ -46,6 +46,11 @@ Thank you for considering contributing to our project! This guide will help you 
     npm install
     ```
 
+4. Generate prisma client
+   ```sh
+    npx prisma generate
+   ```
+   
 3. Start the development server:
     ```sh
     npm run dev
