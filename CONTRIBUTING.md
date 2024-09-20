@@ -19,55 +19,60 @@ Thank you for considering contributing to our project! This guide will help you 
 ### Frontend
 
 1. Clone the repository:
-    ```sh
-    git clone https://github.com/your-repo.git
-    cd your-repo/frontend
-    ```
+
+   ```sh
+   git clone https://github.com/your-repo.git
+   cd your-repo/frontend
+   ```
 
 2. Install dependencies:
-    ```sh
-    npm install
-    ```
+
+   ```sh
+   npm install
+   ```
 
 3. Start the development server:
-    ```sh
-    npm run dev
-    ```
+   ```sh
+   npm run dev
+   ```
 
 ### Backend
 
 1. Navigate to the backend directory:
-    ```sh
-    cd ../backend
-    ```
+
+   ```sh
+   cd ../backend
+   ```
 
 2. Install dependencies:
-    ```sh
-    npm install
-    ```
 
-4. Generate prisma client
    ```sh
-    npx prisma generate
+   npm install
    ```
-   
-3. Start the development server:
-    ```sh
-    npm run dev
-    ```
+
+3. Generate prisma client
+   ```sh
+   npx prisma generate
+   ```
+4. Start the development server:
+   ```sh
+   npm run dev
+   ```
 
 ## Creating a Branch
 
 1. Ensure you are on the `main` branch and it is up to date:
-    ```sh
-    git checkout main
-    git pull origin main
-    ```
+
+   ```sh
+   git checkout main
+   git pull origin main
+   ```
 
 2. Create a new branch for your feature or bugfix:
-    ```sh
-    git checkout -b feature/your-feature-name
-    ```
+
+   ```sh
+   git checkout -b feature/your-feature-name
+   ```
 
 ## Commit Message Semantics
 
@@ -83,16 +88,20 @@ We follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0
 
 ### Example Commit Message
 
+```sh
+git commit -m "feat: Hero section added"
+git commit -m "docs: Update Readme.md"
+```
 
-***************************************************************************************************************************
-
+---
 
 ## Submitting a Pull Request
 
 1. Push your branch to the remote repository:
-    ```sh
-    git push origin feature/your-feature-name
-    ```
+
+   ```sh
+   git push origin feature/your-feature_branch-name
+   ```
 
 2. Open a pull request on GitHub.
 
