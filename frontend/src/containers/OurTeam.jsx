@@ -25,7 +25,7 @@ const teamMembers = [
   },
   {
     name: 'Arpit',
-    designation: 'Graphics Design',
+    designation: 'Sr. Frontend Dev',
     imageUrl: 'https://avatars.githubusercontent.com/u/56201652?v=4',
     socialLinks: {
       website: '#',
@@ -60,7 +60,7 @@ const teamMembers = [
 
 const OurTeam = () => {
   return (
-    <div className="container max-w-screen-xl mx-auto py-12">
+    <div className="container max-w-screen-xl mx-auto py-12" id="team">
       <h2 className="text-4xl font-semibold text-center mb-16">
         Meet our <span className="text-primary">Team</span> at TestVisionAI
       </h2>
