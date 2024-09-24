@@ -33,19 +33,20 @@ export default function TestVision() {
   };
 
   return (
-    <div className="container">
+    <div className="container ml-8 mt-8">
       <form onSubmit={handleOnSubmit}>
         <div className="context">
           <label htmlFor="context">Context:</label>
           <textarea
             id="context"
             value={context}
-            placeholder="Enter general context"
+            placeholder="    Enter general context"
             onChange={(e) => setContext(e.target.value)}
+            style={{ height: "18px" }} // Limiting the height of the textbox
           />
         </div>
-        <div className="screenshots">
-          <label htmlFor="screenshots">Upload Screenshot</label>
+        <div className="screenshots mt-8">
+          <label htmlFor="screenshots">Upload Screenshots : </label>
           <input
             type="file"
             id="screenshots"
@@ -54,7 +55,9 @@ export default function TestVision() {
             onChange={handleFileChange}
           />
         </div>
-        <button type="submit">Describe Testing Instructions</button>
+        <button type="submit" className="mt-8 p-2" style={{ border: "1px solid black" }}>
+          Describe Testing Instructions
+        </button>
       </form>
     </div>
   );
