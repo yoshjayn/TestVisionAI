@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
-import ExpandableContent from './components/ExpandableContent';
+import ExpandableContent from '../components/expandableCard/expandableCard';
 import { MdOutlineFileUpload, MdTextFields } from "react-icons/md";
 import { FaRegUser, FaRegHeart, FaRegSmile } from "react-icons/fa";
 import { VscSend } from "react-icons/vsc";
-import useToggleStore from '../../store/useStore';
-import TestVisionSVG from "../../assets/test_vision_image.svg";
+import useToggleStore from '../store/useStore';
+import TestVisionSVG from "../assets/test_vision_image.svg";
 
-const LandingPage = () => {
+const UsageGuide = () => {
     const contentData = [
         {
             icon: <FaRegUser size={20} />,
@@ -84,5 +84,4 @@ const LandingPage = () => {
     );
 };
 
-export default LandingPage;
-
+export default UsageGuide;

@@ -1,4 +1,4 @@
-import useToggleStore from "../../../store/useStore";
+import useToggleStore from "../../store/useStore";
 
 const ExpandableContent = ({ icon, heading, content, index }) => {
     const { currentIndex, toggleIndex } = useToggleStore();
@@ -36,4 +36,3 @@ const ExpandableContent = ({ icon, heading, content, index }) => {
 };
 
 export default ExpandableContent;
-
