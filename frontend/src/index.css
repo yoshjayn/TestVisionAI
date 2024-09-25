@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -75,4 +77,16 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+.filter-teal {
+    filter: invert(45%) sepia(90%) saturate(500%) hue-rotate(120deg) brightness(95%) contrast(95%);
+}
+
+:root {
+    --background: #ffffff;
+    --foreground: #000000;
+    --card: #0A1A2A;
+    --card-foreground: #ffffff;
+    --primary: #09C0A1;
+    --muted: #828282;
 }
