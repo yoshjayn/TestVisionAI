@@ -65,8 +65,8 @@ const UsageGuide = () => {
   const validIndex = currentIndex ? currentIndex - 1 : 0;
 
   return (
-    <div className="px-14 flex flex-col gap-7 py-20">
-      <div className="w-full gap-2 flex flex-col">
+    <div className="px-16 flex flex-col gap-7 pb-20 pt-36" id='usage-guide'>
+      <div className="w-full gap-2 flex flex-col gap-10 pb-5">
         <div className="text-[#09C0A1] font-bold text-4xl">USAGE GUIDE</div>
         <div className="text-black font-bold text-6xl">How it Works?</div>
       </div>
