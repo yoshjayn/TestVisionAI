@@ -21,8 +21,8 @@ Thank you for considering contributing to our project! This guide will help you 
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/your-repo.git
-   cd your-repo/frontend
+   git clone https://github.com/yoshjayn/TestVisionAI.git
+   cd TestVisionAI/frontend
    ```
 
 2. Install dependencies:
